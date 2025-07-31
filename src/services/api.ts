@@ -1,6 +1,11 @@
 import { supabase } from '@/lib/supabase'
 
-const API_BASE_URL = 'http://0.0.0.0:8000'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://0.0.0.0:8000'
+
+// Validate environment variable
+if (!import.meta.env.VITE_API_BASE_URL) {
+  console.warn('VITE_API_BASE_URL not set, using fallback URL:', API_BASE_URL)
+}
 
 export interface Matrix {
   data: number[][]
