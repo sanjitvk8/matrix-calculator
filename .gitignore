@@ -27,3 +27,4 @@ dist-ssr
 .env.*
 !.env.example
 backend/__pycache__
+.bolt
