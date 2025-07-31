@@ -10,17 +10,19 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
   build: {
     minify: 'terser',
     sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom', 'framer-motion'],
-          ui: ['@/components/ui']
+          vendor: [
+            'react', 
+            'react-dom', 
+            'framer-motion',
+            '@supabase/supabase-js',
+            'react-router-dom'
+          ]
         }
       }
     }
