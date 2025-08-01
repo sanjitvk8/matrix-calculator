@@ -22,8 +22,8 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:5173", 
         "http://localhost:3000",
-        "https://your-frontend-app.onrender.com",  # Replace with your actual frontend URL
-        "*"  # Allow all origins for now - restrict this in production
+        "https://matrix-calculator-1-0cc7.onrender.com",
+        "*"  # Allow all origins for now - restrict in production
     ],
     allow_credentials=True,
     allow_methods=["*"],
