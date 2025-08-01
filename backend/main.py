@@ -19,7 +19,12 @@ app = FastAPI(title="MatrixCalc+ API", version="1.0.0")
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000"],
+    allow_origins=[
+        "http://localhost:5173", 
+        "http://localhost:3000",
+        "https://your-frontend-app.onrender.com",  # Replace with your actual frontend URL
+        "*"  # Allow all origins for now - restrict this in production
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
