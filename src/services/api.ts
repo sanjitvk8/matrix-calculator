@@ -1,6 +1,6 @@
 import { supabase } from '@/lib/supabase'
 
-const API_BASE_URL = https://matrix-calculator-wphf.onrender.com
+const API_BASE_URL = "https://matrix-calculator-wphf.onrender.com"
 
 // Validate environment variable
 if (!import.meta.env.VITE_API_BASE_URL) {
